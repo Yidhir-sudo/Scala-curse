@@ -1,19 +1,34 @@
 # Default .gitignore for the project.
 
 ### Intellij ###
-.idea
+.idea/
 out/
+target/
+*.iml
+*.ipr
+*.iws
 
 ### Java ###
 *.class
 *.log
+hs_err_pid*.log
+replay_pid*.log
 
 ### macOS ###
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+### Windows ###
+Thumbs.db
+Desktop.ini
 
 ### SBT ###
 dist/*
 target/
+project/target/
+project/project/
 lib_managed/
 src_managed/
 project/boot/
@@ -21,6 +36,9 @@ project/plugins/project/
 .history
 .cache
 .lib/
+.ivy2/
+.sbt/
+.coursier/
 
 ### Scala ###
 .bloop/
@@ -57,7 +75,14 @@ tags
 .vim
 
 ### VisualStudioCode ###
-.vscode
+.vscode/
+*.code-workspace
+.history/
+
+### Environment / secrets ###
+.env
+.env.*
+!.env.example
 
 ### Docusaurus ###
 .docusaurus
